@@ -16,13 +16,25 @@
 const button = document.getElementById('convert-btn');
 let x = "";
 let ret = document.getElementById('response');
+let div = document.getElementById('output');
 
 function intToRom(){
     let input = document.getElementById('num-input').value;
     let answer = `"${x}"`
-    if (input == null);
-        ret.innerHTML = `Please enter a valid number`;
-        return
+    div.style.display = "";
+    if (input > 3999){
+        ret.innerHTML = `Please enter a number less than or equal to 3999`;
+        return;
+    } else if (input < 1) {
+        if (input === ""){
+            ret.innerHTML = `Please enter a valid number`;
+            return;
+        }
+        else{
+            ret.innerHTML = `Please enter a number greater than or equal to 1`;
+            return;
+        }
+    }
 }
 
 button.addEventListener('click', intToRom)

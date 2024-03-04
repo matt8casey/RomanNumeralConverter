@@ -1,0 +1,73 @@
+img {
+    width: 50%;
+
+}
+
+body {
+    background-color: rgb(5, 5, 54);
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 30%;
+    margin-bottom: 40%;
+    overflow: hidden;
+}
+
+.title {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+h1, h3, #output{
+    color: white;
+}
+
+.input {
+    background-color: #2d2d5a;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    opacity: 90%;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+#convert-btn {
+    margin-top: 20px;
+    background-color: purple;
+    color: white;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+input {
+    width: 50%;
+}
+
+#output {
+    background-color: #2d2d5a;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    opacity: 90%;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: x-large;
+    padding: 20px;
+}

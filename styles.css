@@ -5,10 +5,9 @@ img {
 
 body {
     background-color: rgb(5, 5, 54);
-    margin: auto;
-    box-sizing: border-box;
-    margin-top: 30%;
+    margin-top: 20%;
     margin-bottom: 40%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -22,7 +21,9 @@ body {
 }
 
 
-h1, h3, #output{
+h1,
+h3,
+#output {
     color: white;
 }
 

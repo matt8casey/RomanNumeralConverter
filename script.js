@@ -14,27 +14,53 @@
 // C can be placed before D (500) and M (1000) to make 400 and 900.
 
 const button = document.getElementById('convert-btn');
-let x = "";
+let response = "";
 let ret = document.getElementById('response');
 let div = document.getElementById('output');
 
-function intToRom(){
+function intToRom() {
     let input = document.getElementById('num-input').value;
-    let answer = `"${x}"`
     div.style.display = "";
-    if (input > 3999){
+    const romanNumerals = [
+        { "M": 1000 },
+        { "CM": 900 },
+        { "D": 500 },
+        { "CD": 400 },
+        { "C": 100 },
+        { "XC": 90 },
+        { "L": 50 },
+        { "XL": 40 },
+        { "X": 10 },
+        { "IX": 9 },
+        { "V": 5 },
+        { "IV": 4 },
+        { "I": 1 }
+    ];
+    if (input > 3999) {
         ret.innerHTML = `Please enter a number less than or equal to 3999`;
         return;
-    } else if (input < 1) {
-        if (input === ""){
+    } if (input < 1) {
+        if (input === "") {
             ret.innerHTML = `Please enter a valid number`;
             return;
         }
-        else{
+        else {
             ret.innerHTML = `Please enter a number greater than or equal to 1`;
             return;
         }
     }
+    else {
+        for (let i = 0; i < romanNumerals.length; i++) {
+            // saying I is unavailable? not sure why i cant use it to iterate through the array
+            if (input >= romanNumerals[i[value]]) {
+                input -= romanNumerals[i[value]];
+                response += romanNumerals[i[key]];
+            }
+        }
+    }
+    let answer = `${response}`
+    ret.innerHTML = answer;
 }
+
 
 button.addEventListener('click', intToRom)

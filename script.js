@@ -14,27 +14,27 @@
 // C can be placed before D (500) and M (1000) to make 400 and 900.
 
 const button = document.getElementById('convert-btn');
-let response = "";
 let ret = document.getElementById('response');
 let div = document.getElementById('output');
 
 function intToRom() {
     let input = document.getElementById('num-input').value;
     div.style.display = "";
+    let response = "";
     const romanNumerals = [
-        { "M": 1000 },
-        { "CM": 900 },
-        { "D": 500 },
-        { "CD": 400 },
-        { "C": 100 },
-        { "XC": 90 },
-        { "L": 50 },
-        { "XL": 40 },
-        { "X": 10 },
-        { "IX": 9 },
-        { "V": 5 },
-        { "IV": 4 },
-        { "I": 1 }
+        { key: "M", amount: 1000 },
+        { key: "CM", amount: 900 },
+        { key: "D", amount: 500 },
+        { key: "CD", amount: 400 },
+        { key: "C", amount: 100 },
+        { key: "XC", amount: 90 },
+        { key: "L", amount: 50 },
+        { key: "XL", amount: 40 },
+        { key: "X", amount: 10 },
+        { key: "IX", amount: 9 },
+        { key: "V", amount: 5 },
+        { key: "IV", amount: 4 },
+        { key: "I", amount: 1 }
     ];
     if (input > 3999) {
         ret.innerHTML = `Please enter a number less than or equal to 3999`;
@@ -51,13 +51,14 @@ function intToRom() {
     }
     else {
         for (let i = 0; i < romanNumerals.length; i++) {
-            // saying I is unavailable? not sure why i cant use it to iterate through the array
-            if (input >= romanNumerals[i[value]]) {
-                input -= romanNumerals[i[value]];
-                response += romanNumerals[i[key]];
+            // iteration works? cant get the if statement to trigger
+            if (input >= romanNumerals[i].amount) {
+                input -= romanNumerals[i].amount;
+                response += romanNumerals[i].key;
             }
         }
     }
+
     let answer = `${response}`
     ret.innerHTML = answer;
 }

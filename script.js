@@ -51,10 +51,10 @@ function intToRom() {
     }
     else {
         for (let i = 0; i < romanNumerals.length; i++) {
-            // iteration works? cant get the if statement to trigger
-            if (input >= romanNumerals[i].amount) {
-                input -= romanNumerals[i].amount;
-                response += romanNumerals[i].key;
+            let num = Math.floor(input / romanNumerals[i].amount)
+            if (num) {
+                response += romanNumerals[i].key.repeat(num);
+                input -= romanNumerals[i].amount * num;
             }
         }
     }

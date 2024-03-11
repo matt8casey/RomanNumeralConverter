@@ -18,7 +18,7 @@ let ret = document.getElementById('response');
 let div = document.getElementById('output');
 
 function intToRom() {
-    let input = document.getElementById('num-input').value;
+    let input = document.getElementById('number').value;
     div.style.display = "";
     let response = "";
     const romanNumerals = [
